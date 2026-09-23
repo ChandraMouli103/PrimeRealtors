@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer {
+    margin-top: auto;
+    padding: 64px 6% 22px;
+    color: #dce8d2;
+    background: #183323;
+}
+
+.footer-main {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 55px;
+}
+
+.footer-intro {
+    width: 100%;
+    max-width: 420px;}
+
+.footer-brand {
+    display: block;
+    margin-bottom: 15px;
+    padding: 0;
+    line-height: 0;
+}
+
+.footer-brand img {
+    width: 175px;
+    height: 52px;
+    display: block;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.footer-intro p {
+    max-width: 280px;
+    margin: 0 0 20px;
+    color: #a8bba9;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.footer-email {
+    border: 0;
+    padding: 0;
+    color: #c6e09a;
+    background: transparent;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.footer-links {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    gap: 75px;
+}
+
+.footer-contact {
+    flex: 1 1 260px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-contact h2 {
+    margin-bottom: 6px;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-contact a,
+.footer-contact address {
+    color: #a8bba9;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 1.55;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #c6e09a;
+}
+
+.footer-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-group h2 {
+    margin: 0 0 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-group a {
+    color: #a8bba9;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-note {
+    width: 100%;
+    max-width: 180px;
+    display: none;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    color: #c6e09a;
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    line-height: 1.1;
+}
+
+.footer-arrow {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1440px;
+    margin: 55px auto 0;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #36513d;
+    color: #78917c;
+    font-size: 10px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    z-index: 50;
+    right: 24px;
+    bottom: 24px;
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #25d366;
+    box-shadow: 0 8px 22px rgba(18, 74, 38, .28);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.whatsapp-float
+.whatsapp-float:hover {
+    color: #fff;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 12px 26px rgba(18, 74, 38, .36);
+}
+
+.whatsapp-float:focus-visible {
+    outline: 3px solid #b6d391;
+    outline-offset: 3px;
+}
+
+.whatsapp-float svg {
+    width: 29px;
+    height: 29px;
+    fill: currentColor;
+}
+
+@media (max-width: 800px) {
+    .footer-main {
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+
+    .footer-intro {
+        width: 100%;
+        max-width: none;
+    }
+
+    .footer-links {
+        width: 100%;
+        max-width: none;
+        gap: 45px;
+    }
+
+    .footer-contact {
+        width: 100%;
+        max-width: none;
+    }
+
+    .footer-note {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-links {
+        width: 100%;
+    }
+
+    .footer-note {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 35px;
+    }
+
+    .site-footer {
+        padding: 24px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+    }
+
+    .whatsapp-float {
+        right: 16px;
+        bottom: 50px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.footer-brand,
+.footer-group button,
+.footer-arrow {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.footer-group button {
+    padding: 0;
+    color: #a8bba9;
+    font-size: 12px;
+    text-align: left;
+}
+
+.footer-group button:hover,
+.footer-email:hover {
+    color: #fff;
+}
