@@ -91,6 +91,20 @@ function Presence() {
                         <p className="presence-eyebrow">Looking for a specific area?</p>
                         <h2>Tell us where you want to <em>begin.</em></h2>
                         <p>Contact us with your preferred locality and we will share available options and layout details.</p>
+                        <div className="presence-social-links" aria-label="Follow Prime Realtors on social media">
+                            <a href="https://www.instagram.com/primerealtorsjanaharsha/" target="_blank" rel="noreferrer" aria-label="Open Prime Realtors Janaharsha on Instagram">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.8" r=".8" className="presence-social-icon-fill" /></svg>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/PrimeRealtorsJanaharsha/" target="_blank" rel="noreferrer" aria-label="Open Prime Realtors Janaharsha on Facebook">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-3H14V8c0-.9.3-1.5 1.6-1.5h2V3.8c-.4-.1-1.5-.2-2.8-.2-2.8 0-4.7 1.7-4.7 4.8V10H7v3h3v8h4Z" /></svg>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.youtube.com/@PrimeRealtorsjanaharsha" target="_blank" rel="noreferrer" aria-label="Open Prime Realtors Janaharsha on YouTube">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.7 12 4.7 12 4.7s-5.9 0-7.6.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.5 7.6.5 7.6.5s5.9 0 7.6-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8Z" /><path d="m10 15.5 5-3.5-5-3.5v7Z" className="presence-social-play" /></svg>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
                         <button type="button" onClick={() => navigate('/contact#contact-details')}>Contact Prime Realtors <span aria-hidden="true">&#8599;</span></button>
                     </div>
                 </div>

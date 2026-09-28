@@ -48,6 +48,42 @@
     z-index: 30;
 }
 
+.header-quick-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-whatsapp {
+    width: 40px;
+    height: 40px;
+    display: none;
+    place-items: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #25d366;
+    box-shadow: 0 3px 10px rgba(18, 74, 38, .2);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.header-whatsapp:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(18, 74, 38, .28);
+}
+
+.header-whatsapp:focus-visible {
+    outline: 3px solid rgba(117, 168, 93, .35);
+    outline-offset: 3px;
+}
+
+.header-whatsapp svg {
+    width: 23px;
+    height: 23px;
+    fill: currentColor;
+}
+
 .call-button {
     display: inline-flex;
     align-items: center;
@@ -270,6 +306,12 @@
     background: var(--ink);
 }
 
+@media (min-width: 761px) {
+    .header-whatsapp {
+        display: grid;
+    }
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -294,6 +336,15 @@
     .header-inner {
         min-height: 48px;
         gap: 12px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .header-quick-links {
+        flex-direction: column;
+        gap: 5px;
     }
 
     .primary-navigation {
@@ -402,6 +453,18 @@
         gap: 8px;
     }
 
+    .header-actions {
+        gap: 5px;
+    }
+
+    .header-quick-links {
+        gap: 4px;
+    }
+
+    .header-logo {
+        width: 105px;
+    }
+
     .brand {
         gap: 7px;
     }
@@ -423,17 +486,33 @@
     }
 
     .call-button {
-        width: 42px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
         justify-content: center;
         padding: 4px;
         border-color: #f49a1d;
         background: #f49a1d;
     }
 
+    .header-whatsapp {
+        width: 34px;
+        height: 34px;
+    }
+
+    .header-whatsapp svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-cta {
+        min-height: 34px;
+        padding: 6px 7px;
+        font-size: 9px;
+    }
+
     .menu-toggle {
-        width: 38px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
     }
 
     .primary-navigation.is-open {
@@ -455,8 +534,8 @@
 
 @media (max-width: 1120px) and (min-width: 801px) {
     .site-header {
-        padding-right: 3%;
-        padding-left: 3%;
+        padding-right: 1%;
+        padding-left: 0%;
     }
 
     .header-inner {

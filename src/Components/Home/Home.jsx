@@ -70,39 +70,6 @@ function Home() {
 
     return (
         <main className="home-page" id="home">
-            <section className="janaharsha-hero">
-                <div className="hero-content-wrap">
-                    <div className="hero-copy">
-                        <p className="home-eyebrow">
-                            <span /> Janaharsha, Hyderabad
-                        </p>
-                        <h1>Own Land Today.<br />
-                            <em>Build a Legacy for Generations.</em>
-                        </h1>
-                        <p className="hero-lead">An established plotted landscape near Ramoji Film City, where your family can begin with land today and shape its future over time.</p>
-                        <div className="hero-actions">
-                            <button className="home-button home-button-primary" type="button" onClick={() => navigate('/buy-sell?tab=buy')}>Find a plot <span>&#8599;</span></button>
-                            <button className="home-button home-button-outline" type="button" onClick={() => navigate('/buy-sell?tab=visit#contact-details')}>Book a site visit</button>
-                        </div>
-                    </div>
-                    <div className="janaharsha-art" aria-label="Illustration of a farmhouse plot near Hyderabad">
-                       <img src={homeHero} alt="Aerial view of Janaharsha plotted landscape with roads and greenery" />
-                    </div>
-                </div>
-            </section>
-            <MetricBand />
-            {/* Future Planning */}
-            <section className="future-section content-width" id="about">
-                <div className="section-intro">
-                    <p className="home-eyebrow">More than land</p>
-                    <h2>A plan for the <em>future.</em></h2>
-                    <h3>Own today. Create tomorrow.</h3>
-                    <p>Land does not always need to be developed immediately. A plot purchased today can be planned gradually over the next 8-12 years and beyond, based on your family&apos;s requirements.</p><p>Buy a piece of land today and give your family the freedom to decide what it becomes tomorrow.</p>
-                </div>
-                  <div className="future-copy">
-                    <img src={futureplanning} alt="future-plan" className='future-paln-img' />
-                </div>
-            </section>
             {/* plot possibilities */}
             <section className="possibility-section content-width-evry">
                 <div className="section-heading">
@@ -135,6 +102,72 @@ function Home() {
                     </article>)})}
                 </div>
             </section>
+            <section className="janaharsha-hero">
+                <div className="hero-content-wrap">
+                    <div className="hero-copy">
+                        <p className="home-eyebrow">
+                            <span /> Janaharsha, Hyderabad
+                        </p>
+                        <h1>Own Land Today.<br />
+                            <em>Build a Legacy for Generations.</em>
+                        </h1>
+                        <p className="hero-lead">An established plotted landscape near Ramoji Film City, where your family can begin with land today and shape its future over time.</p>
+                        <div className="hero-actions">
+                            <button className="home-button home-button-primary" type="button" onClick={() => navigate('/buy-sell?tab=buy')}>Find a plot <span>&#8599;</span></button>
+                            {/* <button className="home-button home-button-outline" type="button" onClick={() => navigate('/buy-sell?tab=visit#contact-details')}>Book a site visit</button> */}
+                        </div>
+                    </div>
+                    <div className="janaharsha-art" aria-label="Illustration of a farmhouse plot near Hyderabad">
+                       <img src={homeHero} alt="Aerial view of Janaharsha plotted landscape with roads and greenery" />
+                    </div>
+                </div>
+            </section>
+            <MetricBand />
+            <section className="foundation-section">
+                <div className="foundation-inner">
+                    <div className="foundation-heading">
+                        <p className="foundation-eyebrow">An established venture</p>
+                        <h2>A strong foundation for <em>what comes next.</em></h2>
+                        <p>Janaharsha was completed in 2006. Its established setting brings together planned roads, electricity infrastructure in applicable areas, and access to Hyderabad’s southern growth corridor.</p>
+                        <div className="foundation-year"><strong>2006</strong><span>Project completed</span></div>
+                    </div>
+                    <div className="foundation-list">
+                        <article>
+                            <span className="foundation-number">01</span>
+                            <span className="foundation-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="1" /><path d="M8 3v4m8-4v4M4 10h16M8 14h3m-3 3h6" /></svg></span>
+                            <div><h3>Established since 2006</h3><p>A plotted landscape with years of natural growth.</p></div>
+                        </article>
+                        <article>
+                            <span className="foundation-number">02</span>
+                            <span className="foundation-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 21 8 3m8 18L13 3M9 7h6m-7 5h8m-9 5h10" /></svg></span>
+                            <div><h3>Roads and connectivity</h3><p>Internal roads with routes toward ORR and major highways.</p></div>
+                        </article>
+                        <article>
+                            <span className="foundation-number">03</span>
+                            <span className="foundation-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-7l1-7Z" /></svg></span>
+                            <div><h3>Power infrastructure</h3><p>Electricity is available in applicable parts of the venture.</p></div>
+                        </article>
+                        <article>
+                            <span className="foundation-number">04</span>
+                            <span className="foundation-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg></span>
+                            <div><h3>Near Ramoji Film City</h3><p>In a recognised destination corridor south of Hyderabad.</p></div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            {/* Future Planning */}
+            <section className="future-section content-width" id="about">
+                <div className="section-intro">
+                    <p className="home-eyebrow">More than land</p>
+                    <h2>A plan for the <em>future.</em></h2>
+                    <h3>Own today. Create tomorrow.</h3>
+                    <p>Land does not always need to be developed immediately. A plot purchased today can be planned gradually over the next 8-12 years and beyond, based on your family&apos;s requirements.</p><p>Buy a piece of land today and give your family the freedom to decide what it becomes tomorrow.</p>
+                </div>
+                  <div className="future-copy">
+                    <img src={futureplanning} alt="future-plan" className='future-paln-img' />
+                </div>
+            </section>
+            
             {/* Nature Plan */}
             <section className="nature-section">
                 <div className="content-width nature-row">

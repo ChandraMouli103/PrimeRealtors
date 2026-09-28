@@ -33,7 +33,15 @@ function Contact() {
         }
     }, [location.hash])
 
-    const selectPath = (path) => navigate(`/buy-sell?tab=${path}`)
+    const selectPath = (path) => {
+        const target = path === 'buy'
+            ? '/buy-sell?tab=buy#buy-layouts-title'
+            : path === 'sell'
+                ? '/buy-sell?tab=sell#sell-enquiry'
+                : `/buy-sell?tab=${path}`
+
+        navigate(target)
+    }
     const submitContactForm = (event) => {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
@@ -59,7 +67,6 @@ function Contact() {
                 </div>
             
             </section>
-
             <section className="contact-content">
                 <div className="contact-section-heading">
                     {/* <p className="contact-eyebrow">How can we help?</p> */}
@@ -74,7 +81,7 @@ function Contact() {
                     </button>)}
                 </div>
             </section>
-             <div className="contact-details" id="contact-details">
+            <div className="contact-details" id="contact-details">
                     <div className="contact-detail-info">
                         <div className="contact-list-heading">
                             <p className="contact-eyebrow-">Get in touch</p>
@@ -82,7 +89,7 @@ function Contact() {
                         </div>
                         <div className="contact-detail-list">
                         <a href="tel:+918073648872"><span className="contact-detail-icon" aria-hidden="true">&#9742;</span><small>Kalyan:</small><strong>80736 48872</strong></a>
-                        <a href="tel:+919980746991"><span className="contact-detail-icon" aria-hidden="true">&#9742;</span><small>Raju:</small><strong>99807 46991</strong></a>
+                        <a href="tel:+918463937607"><span className="contact-detail-icon" aria-hidden="true">&#9742;</span><small>Srinuvas:</small><strong>8463937607</strong></a>
                         <a href="tel:+918106438696"><span className="contact-detail-icon" aria-hidden="true">&#9742;</span><small>Shiva:</small><strong>81064 38696</strong></a> 
                         <a href="https://wa.me/918073648872" target="_blank" rel="noreferrer"><span className="contact-detail-icon contact-whatsapp-icon" aria-hidden="true">WA</span><small>WhatsApp</small><strong>+91 80736 48872</strong></a>
                         <a href="mailto:primerealtors.janaharsha@gmail.com"><span className="contact-detail-icon" aria-hidden="true">&#9993;</span><small>Email</small><strong>primerealtors.janaharsha@gmail.com</strong></a>
@@ -98,7 +105,7 @@ function Contact() {
                         <label>Address<textarea name="address" rows="3" placeholder="Your address or preferred location" required /></label>
                         <button className="contact-form-submit" type="submit">Submit Enquiry <span aria-hidden="true">&#8599;</span></button>
                     </form>
-                </div>
+            </div>
         </main>
     )
 }

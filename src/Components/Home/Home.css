@@ -372,6 +372,156 @@
     line-height: 1.5;
 }
 
+.foundation-section {
+    width: 100%;
+    padding: 64px 24px;
+    color: #eff5e9;
+    background: #f2f4eb;
+}
+
+.foundation-inner {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    gap: 28px;
+}
+
+.foundation-heading {
+    min-height: 340px;
+    padding: 34px;
+    flex: 0 1 43%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 3px;
+    background: var(--forest);
+}
+
+.foundation-eyebrow {
+    margin: 0 0 17px;
+    color: #d9edbc;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.foundation-heading h2 {
+    margin: 0;
+    color: #f5f7ef;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.foundation-heading h2 em {
+    color: #b6d391;
+    font-style: italic;
+}
+
+.foundation-heading > p:last-child {
+    margin-top: 16px;
+    color: #c8d7c5;
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.foundation-year {
+    margin-top: 20px;
+    padding-top: 14px;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: 11px;
+    border-top: 1px solid rgba(200, 215, 197, .28);
+}
+
+.foundation-year strong {
+    color: #d6e9b8;
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.foundation-year span {
+    color: #c8d7c5;
+    font-size: 10px;
+    letter-spacing: .6px;
+}
+
+.foundation-list {
+    flex: 1 1 57%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 0 22px;
+}
+
+.foundation-list article {
+    min-width: 240px;
+    min-height: 132px;
+    flex: 1 1 calc(50% - 11px);
+    padding: 19px 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border-top: 1px solid #d4dfce;
+}
+
+.foundation-number {
+    padding-top: 2px;
+    flex: 0 0 22px;
+    color: #6d8c58;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.foundation-icon {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: grid;
+    place-items: center;
+    color: var(--forest);
+    border-radius: 50%;
+    background: #dce9cf;
+}
+
+.foundation-icon svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6;
+}
+
+.foundation-list article > div {
+    min-width: 0;
+    flex: 1;
+}
+
+.foundation-list h3 {
+    margin: 0;
+    color: var(--forest);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.foundation-list p {
+    margin: 5px 0 0;
+    color: #637267;
+    font-size: 10px;
+    line-height: 1.65;
+}
+
 .possibility-section,
 .find-section,
 .opportunity-section,
@@ -1246,6 +1396,7 @@
     }
 
     .hero-content-wrap,
+    .foundation-inner,
     .future-section,
     .find-section,
     .nature-row,
@@ -1290,6 +1441,26 @@
 
     .future-copy {
         padding-top: 0;
+    }
+
+    .foundation-inner {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .foundation-heading,
+    .foundation-list {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .foundation-heading {
+        min-height: 0;
+    }
+
+    .foundation-list article {
+        min-width: 220px;
+        flex-basis: calc(50% - 11px);
     }
 }
 
@@ -1411,6 +1582,7 @@
     }
 
     .future-section,
+    .foundation-section,
     .possibility-section,
     .find-section,
     .opportunity-section,
@@ -1418,6 +1590,25 @@
     .support-section {
         padding: 30px;
         gap: 30px;
+    }
+
+    .foundation-section {
+        padding: 30px 16px;
+    }
+
+    .foundation-heading {
+        padding: 24px 20px;
+    }
+
+    .foundation-list {
+        gap: 0;
+    }
+
+    .foundation-list article {
+        min-width: 100%;
+        min-height: 0;
+        flex-basis: 100%;
+        padding: 16px 2px;
     }
 
     .future-section::before,
@@ -1478,6 +1669,7 @@
 
     .hero-copy h1,
     .future-section h2,
+    .foundation-heading h2,
     .nature-copy h2,
     .remote-row h2,
     .closing-section h2 {

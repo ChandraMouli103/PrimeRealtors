@@ -316,6 +316,70 @@ padding: 40px;
     align-items: center;
 }
 
+.presence-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presence-social-links a {
+    min-height: 44px;
+    padding: 9px 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #eff5e9;
+    border: 1px solid rgba(200, 215, 197, .4);
+    border-radius: 3px;
+    background: rgba(255, 255, 255, .04);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.presence-social-links a:hover {
+    color: var(--forest);
+    border-color: #b6d391;
+    background: #b6d391;
+}
+
+.presence-social-links a:focus-visible {
+    outline: 3px solid #b6d391;
+    outline-offset: 3px;
+}
+
+.presence-social-links svg {
+    width: 19px;
+    height: 19px;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.presence-social-links a:nth-child(2) svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+.presence-social-icon-fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+.presence-social-links a:nth-child(3) svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+.presence-social-play {
+    fill: var(--forest);
+}
+
 .presence-contact h2 {
     font-size: clamp(38px, 4vw, 54px);
     text-align: center;
@@ -414,6 +478,10 @@ padding: 40px;
         gap: 35px;
         margin-bottom: 0px;
         padding: 42px 26px;
+    }
+
+    .presence-social-links {
+        gap: 8px;
     }
 }
 
