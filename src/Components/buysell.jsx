@@ -255,12 +255,7 @@ function BuySell() {
                         </div>
                         <p className="plot-plan-disclaimer">Illustrative details transcribed from sample registration plans. Confirm dimensions, survey number, boundaries, and availability against the current registered documents.</p>
                     </section>
-                    {/* <div className="buy-phase-grid">
-                        {phaseLayouts.map(([phase, locality, file]) => <article className="buy-phase-item" key={phase}>
-                            <div><span>{locality}</span><h3>{phase}</h3></div>
-                            <a href={file} target="_blank" rel="noreferrer" aria-label={`Open ${phase} layout PDF`}>View layout <span aria-hidden="true">&#8599;</span></a>
-                        </article>)}
-                    </div> */}
+                  
                 </section>
                 <section className="buy-form-section" id="buy-enquiry">
                     <div className="buy-form-copy">

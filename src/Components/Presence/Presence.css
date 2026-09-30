@@ -5,7 +5,8 @@
 
 .presence-hero,
 .presence-layouts,
-.presence-contact {
+.presence-contact,
+.presence-attractions {
     width:100%;
     margin: 0 auto;
 }
@@ -154,6 +155,85 @@
     background: transparent;
     cursor: pointer;
     font-size: 12px;
+    font-weight: 600;
+}
+
+.presence-attractions {
+    background: #f2f5ea;
+    padding: 40px 24px 12px;
+}
+
+.presence-attractions-inner {
+    width: min(1240px, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.presence-attraction-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.presence-attraction-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 110px;
+    padding: 18px 18px 16px;
+    border: 1px solid var(--line);
+    border-left: 4px solid #b9d36a;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 24px rgba(17, 29, 19, 0.04);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.presence-attraction-card:nth-child(1) { border-left-color: #b5d77d; }
+.presence-attraction-card:nth-child(2) { border-left-color: #d7a35d; }
+.presence-attraction-card:nth-child(3) { border-left-color: #7ea7d9; }
+.presence-attraction-card:nth-child(4) { border-left-color: #72b47d; }
+.presence-attraction-card:nth-child(5) { border-left-color: #c98d7b; }
+.presence-attraction-card:nth-child(6) { border-left-color: #9aa0b1; }
+.presence-attraction-card:nth-child(7) { border-left-color: #7db79a; }
+.presence-attraction-card:nth-child(8) { border-left-color: #8fa961; }
+.presence-attraction-card:nth-child(9) { border-left-color: #d5b26f; }
+
+.presence-attraction-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 32px rgba(17, 29, 19, 0.09);
+}
+
+.presence-attraction-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #dfeec5, #f0f2d9);
+    font-size: 26px;
+}
+
+.presence-attraction-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.presence-attraction-card h3 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 1.15rem;
+    line-height: 1.2;
+}
+
+.presence-attraction-card p {
+    margin: 0;
+    color: #5f6a5e;
+    font-size: 0.92rem;
     font-weight: 600;
 }
 

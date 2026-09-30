@@ -48,6 +48,18 @@ const phaseLayouts = [
     ['Phase U', 'Janaharsha', 'A spacious phase where plantation, open land and future living can come together.', phaseU],
 ]
 
+const nearbyAttractions = [
+    { title: 'Ramoji Film City', distance: '3 km', icon: '🎬' },
+    { title: 'Sanghi Temple', distance: '9 km', icon: '🛕' },
+    { title: 'Octopus Commando Training Center', distance: '4 km', icon: '🎖️' },
+    { title: 'Koheda Fruit Market', distance: '6 km', icon: '🍇' },
+    { title: 'Mount Opera', distance: '10 km', icon: '🎵' },
+    { title: 'L.B. Nagar', distance: '25 km', icon: '🏘️' },
+    { title: 'Do Science', distance: '9 km', icon: '🔬' },
+    { title: 'Gandharva Resort', distance: '6 km', icon: '🌿' },
+    { title: 'Sri Rama Chandra Temple', distance: '6 km', icon: '🛕' },
+]
+
 function Presence() {
     const navigate = useNavigate()
 
@@ -66,6 +78,27 @@ function Presence() {
                 </div>
             </section>
 
+            <section className="presence-attractions">
+                <div className="presence-attractions-inner">
+                    <div className="presence-directory-heading">
+                        <div>
+                            <p className="presence-eyebrow">Nearby attractions</p>
+                            <h2>Convenience around the <em>land.</em></h2>
+                        </div>
+                    </div>
+                    <div className="presence-attraction-grid">
+                        {nearbyAttractions.map((item) => (
+                            <article className="presence-attraction-card" key={item.title}>
+                                <span className="presence-attraction-icon" aria-hidden="true">{item.icon}</span>
+                                <div>
+                                    <h3>{item.title}</h3>
+                                    <p>{item.distance}</p>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             <section className="presence-layouts">
                 <div className="presence-directory-heading">
@@ -91,7 +124,7 @@ function Presence() {
                         <p className="presence-eyebrow">Looking for a specific area?</p>
                         <h2>Tell us where you want to <em>begin.</em></h2>
                         <p>Contact us with your preferred locality and we will share available options and layout details.</p>
-                        <div className="presence-social-links" aria-label="Follow Prime Realtors on social media">
+                        {/* <div className="presence-social-links" aria-label="Follow Prime Realtors on social media">
                             <a href="https://www.instagram.com/primerealtorsjanaharsha/" target="_blank" rel="noreferrer" aria-label="Open Prime Realtors Janaharsha on Instagram">
                                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.8" r=".8" className="presence-social-icon-fill" /></svg>
                                 <span>Instagram</span>
@@ -104,7 +137,7 @@ function Presence() {
                                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.7 12 4.7 12 4.7s-5.9 0-7.6.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.5 7.6.5 7.6.5s5.9 0 7.6-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8Z" /><path d="m10 15.5 5-3.5-5-3.5v7Z" className="presence-social-play" /></svg>
                                 <span>YouTube</span>
                             </a>
-                        </div>
+                        </div> */}
                         <button type="button" onClick={() => navigate('/contact#contact-details')}>Contact Prime Realtors <span aria-hidden="true">&#8599;</span></button>
                     </div>
                 </div>

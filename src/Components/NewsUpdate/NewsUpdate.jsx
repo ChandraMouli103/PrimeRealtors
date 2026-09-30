@@ -45,18 +45,18 @@ function NewsUpdate() {
                     <p className="news-eyebrow">Prime Realtors · Janaharsha</p>
                     <h1>News from<br /><em>the landscape.</em></h1>
                     <p>Project views, plot plan guidance and updates from the Janaharsha community.</p>
-                    <a href="https://www.instagram.com/primerealtorsjanaharsha/" target="_blank" rel="noreferrer" className="news-social-link">
+                    {/* <a href="https://www.instagram.com/primerealtorsjanaharsha/" target="_blank" rel="noreferrer" className="news-social-link">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.8" r=".8" /></svg>
                         Follow our updates <span aria-hidden="true">&#8599;</span>
-                    </a>
+                    </a> */}
                 </div>
                 <div className="news-hero-image">
                     <img src={heroImage} alt="Aerial view of Janaharsha plotted landscape and roads" />
                     <span>Janaharsha · Hyderabad</span>
                 </div>
             </section>
-
             
+                    
 {/* 
             <section className="news-contact-band">
                 <div>

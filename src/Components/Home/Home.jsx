@@ -15,6 +15,24 @@ const plotUses = [['Farmhouse', 'Create a peaceful farmhouse based on your famil
 const localities = [['Janaharsha', 'Multiple blocks', '2,000+ acres with teak plantations and established roads.', '120 - 2400+ Sq. Yds'], ['Ibrahimpatnam', 'Multiple blocks', 'Strong road connectivity with access to ORR and Vijayawada Highway.', '150 - 1000 Sq. Yds'], ['Polkampally', 'Select blocks', 'An emerging area with affordable plots and future potential.', '120 - 600 Sq. Yds'], ['Manneguda', 'Select blocks', 'Strategic access to major highways and growing infrastructure.', '200 - 800 Sq. Yds'], ['Raipole', 'Select blocks', 'A quieter locality suited to farmhouse and plantation buyers.', '360 - 1200 Sq. Yds'], ['Naganpally', 'Select blocks', 'A well-connected mix of residential and agricultural land.', '120 - 600 Sq. Yds']]
 const plotSizes = ['120', '200', '240', '360', '480', '600', '800', '900', '1000', '1200', '2400+']
 const opportunities = [['600 Sq. Yds', 'Janaharsha - Block XX', 'East Facing', 'Investment / Future Home'], ['1200 Sq. Yds', 'Janaharsha - Block YY', 'North Facing', 'Farmhouse / Larger Land'], ['240 Sq. Yds', 'Ibrahimpatnam - Block A', 'West Facing', 'Investment'], ['2400+ Sq. Yds', 'Janaharsha - Block ZZ', 'South Facing', 'Farm Land / Plantation']]
+const nearbyAttractions = [
+    { title: 'Ramoji Film City', distance: '3 km', icon: '🎬', tone: 'tone-1' },
+    { title: 'Sanghi Temple', distance: '9 km', icon: '🛕', tone: 'tone-2' },
+    { title: 'Octopus Commando Training Center', distance: '4 km', icon: '🎖️', tone: 'tone-3' },
+    { title: 'Koheda Fruit Market', distance: '6 km', icon: '🍇', tone: 'tone-4' },
+    { title: 'Mount Opera', distance: '10 km', icon: '🎵', tone: 'tone-5' },
+    { title: 'L.B. Nagar', distance: '25 km', icon: '🏘️', tone: 'tone-6' },
+    { title: 'Do Science', distance: '9 km', icon: '🔬', tone: 'tone-7' },
+    { title: 'Gandharva Resort', distance: '6 km', icon: '🌿', tone: 'tone-8' },
+    { title: 'Sri Rama Chandra Temple', distance: '6 km', icon: '🛕', tone: 'tone-9' },
+]
+const locationHighlights = [
+    { title: 'Vijayawada Highway', icon: '🛣️' },
+    { title: 'Koheda', icon: '🍇' },
+    { title: 'Outer Ring Road', icon: '🧭' },
+    { title: 'Industrial Park', icon: '🏭' },
+    { title: 'Ibrahimpatnam', icon: '📍' },
+]
 
 function MetricValue({ value, suffix = '' }) {
     const [currentValue, setCurrentValue] = useState(0)
@@ -123,7 +141,40 @@ function Home() {
                 </div>
             </section>
             <MetricBand />
-            <section className="foundation-section">
+             {/* nearby attractions */}
+            <section className="attraction-section">
+                <div className="content-width attraction-shell">
+                    <div className="attraction-map-card">
+                        <div className="attraction-card-header">
+                            <h2>Nearby Attractions</h2>
+                            <span className="map-north" aria-label="North direction">N</span>
+                        </div>
+                        <div className="attraction-map-grid">
+                            {nearbyAttractions.map((item) => (
+                                <div className={`attraction-pill ${item.tone}`} key={item.title}>
+                                    <span className="attraction-icon" aria-hidden="true">{item.icon}</span>
+                                    <div>
+                                        <strong>{item.title}</strong>
+                                        <small>{item.distance}</small>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="location-highlight-card">
+                        <h2>Location Highlights</h2>
+                        <ul className="location-highlight-list">
+                            {locationHighlights.map((item) => (
+                                <li key={item.title}>
+                                    <span className="location-icon" aria-hidden="true">{item.icon}</span>
+                                    <span>{item.title}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            {/* <section className="foundation-section">
                 <div className="foundation-inner">
                     <div className="foundation-heading">
                         <p className="foundation-eyebrow">An established venture</p>
@@ -154,7 +205,7 @@ function Home() {
                         </article>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* Future Planning */}
             <section className="future-section content-width" id="about">
                 <div className="section-intro">
@@ -240,6 +291,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+           
           {/* NRI / remote buyer support */}
             <section className="remote-section">
                 <div className="content-width remote-row">

@@ -89,7 +89,7 @@ function Contact() {
                         </div>
                         <div className="contact-detail-list">
                         <a href="tel:+918073648872"><span className="contact-detail-icon" aria-hidden="true">&#9742;</span><small>Kalyan:</small><strong>80736 48872</strong></a>
-                        <a href="tel:+918463937607"><span className="contact-detail-icon" aria-hidden="true">&#9742;</span><small>Srinuvas:</small><strong>8463937607</strong></a>
+                        <a href="tel:+918463937607"><span className="contact-detail-icon" aria-hidden="true">&#9742;</span><small>Srinivas:</small><strong>8463937607</strong></a>
                         <a href="tel:+918106438696"><span className="contact-detail-icon" aria-hidden="true">&#9742;</span><small>Shiva:</small><strong>81064 38696</strong></a> 
                         <a href="https://wa.me/918073648872" target="_blank" rel="noreferrer"><span className="contact-detail-icon contact-whatsapp-icon" aria-hidden="true">WA</span><small>WhatsApp</small><strong>+91 80736 48872</strong></a>
                         <a href="mailto:primerealtors.janaharsha@gmail.com"><span className="contact-detail-icon" aria-hidden="true">&#9993;</span><small>Email</small><strong>primerealtors.janaharsha@gmail.com</strong></a>

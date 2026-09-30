@@ -4,7 +4,6 @@ import './Header.css'
 import logo from '../../assets/logo.png'
 const navItems = [
 	{ label: 'Home', href: '/' },
-	// { label: 'About', href: '/about' },
 	{ label: 'Our Presence', href: '/our-presence' },
 	{ label: 'Buy/Sell', href: '/buy-sell' },
 	{ label: 'News Update', href: '/news-update' },

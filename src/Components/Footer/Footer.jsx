@@ -1,10 +1,13 @@
 import './Footer.css'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../assets/logo.jpg'
+import faqPdf from '../../assets/primerealtorss.pdf'
+import privacyPolicyPdf from '../../assets/Prime_Realtors_Janaharsha_Privacy_Policy_1.pdf'
+import termsPdf from '../../assets/Prime_Realtors_Janaharsha_Terms_and_Conditions.pdf'
 
 const footerGroups = [
-    { title: 'Explore', links: [{ label: 'About us', path: '/about' }, { label: 'Gallery', path: '/gallery' }, { label: 'Buying ', path: '/buy-sell?tab=buy' }, { label: 'Selling ', path: '/buy-sell?tab=sell' }] },
-    { title: 'Support', links: [{ label: 'Contact us', path: '/contact' }, { label: 'FAQs', path: '/contact' }, { label: 'Privacy policy', path: '/contact' }] },
+    { title: 'Explore', links: [{ label: 'Our Presence', path: '/our-presence' }, { label: 'Gallery', path: '/gallery' }, { label: 'Buying ', path: '/buy-sell?tab=buy' }, { label: 'Selling ', path: '/buy-sell?tab=sell' }] },
+    { title: 'Support', links: [{ label: 'Contact us', path: '/contact' }, { label: 'FAQs', href: faqPdf }, { label: 'Privacy policy', href: privacyPolicyPdf }, { label: 'Terms & Conditions', href: termsPdf }] },
 ]   
 
 function Footer() {
@@ -30,11 +33,11 @@ function Footer() {
                         </a>
                     </nav>
                 </div>
-                <div className="footer-links">{footerGroups.map((group) => <div className="footer-group" key={group.title}><h2>{group.title}</h2>{group.links.map((link) => <button type="button" onClick={() => navigateFromFooter(link.path)} key={link.label}>{link.label}</button>)}</div>)}</div>
+                <div className="footer-links">{footerGroups.map((group) => <div className="footer-group" key={group.title}><h2>{group.title}</h2>{group.links.map((link) => link.href ? <a href={link.href} target="_blank" rel="noreferrer" key={link.label}>{link.label}</a> : <button type="button" onClick={() => navigateFromFooter(link.path)} key={link.label}>{link.label}</button>)}</div>)}</div>
                 <div className="footer-contact">
                     <h2>Get in touch</h2>
                     <a href="tel:+918073648872">Kalyan: 80736 48872</a>
-                    <a href="tel:+918463937607">Srinuvas: 8463937607</a>
+                    <a href="tel:+918463937607">Srinivas: 8463937607</a>
                     <a href="tel:+918106438696">Shiva: 81064 38696</a>
                     <a href="https://wa.me/918073648872" target="_blank" rel="noreferrer">WhatsApp: +91 80736 48872</a>
                     <a href="mailto:primerealtors.janaharsha@gmail.com">primerealtors.janaharsha@gmail.com</a>
